@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Djinni Test</title>
+
+    <!-- Google font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="main__body">
+    <!-- Header -->
+    @@include('./html/_header.html')
+
+    <!-- Main Page -->
+    <main>
+      <div class="container mt-5 pt-2">
+        <div class="row">
+          <div class="col-md-3">
+            <ul
+              class="list-unstyled sidebar-menu d-flex flex-md-column flex-wrap"
+            >
+              <li class="mb-2 me-2">
+                <a
+                  href="#"
+                  class="menu-item active d-flex align-items-center fw-bold p-2 rounded-3"
+                >
+                  <!-- Here is used svg as icons, due to this project is tiny,
+                  i decide to dont generate/load whole library, otherwise it couldbe done more complex -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                  >
+                    <path d="M15 6.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 3h18v18H3V3Zm16 9.836c-1.145 1.062-2.296 1.618-4 1.618-1.906 0-3.38-1.168-4.847-2.75a3 3 0 0 0-3.863-.454l-.022.015L5 12.213V5h14v7.836Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  All photos</a
+                >
+              </li>
+              <li class="mb-2 me-2">
+                <a
+                  href="#"
+                  class="menu-item d-flex align-items-center fw-bold p-2 rounded-3"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 4C9.87827 4 7.84344 4.84286 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 13.0506 4.20693 14.0909 4.60896 15.0615C5.011 16.0321 5.60028 16.914 6.34315 17.6569C7.08601 18.3997 7.96793 18.989 8.93853 19.391C9.90914 19.7931 10.9494 20 12 20C13.0506 20 14.0909 19.7931 15.0615 19.391C16.0321 18.989 16.914 18.3997 17.6569 17.6569C18.3997 16.914 18.989 16.0321 19.391 15.0615C19.7931 14.0909 20 13.0506 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM4.92893 4.92893C6.8043 3.05357 9.34784 2 12 2C14.6522 2 17.1957 3.05357 19.0711 4.92893C20.9464 6.8043 22 9.34784 22 12C22 13.3132 21.7413 14.6136 21.2388 15.8268C20.7362 17.0401 19.9997 18.1425 19.0711 19.0711C18.1425 19.9997 17.0401 20.7362 15.8268 21.2388C14.6136 21.7413 13.3132 22 12 22C10.6868 22 9.38642 21.7413 8.17317 21.2388C6.95991 20.7362 5.85752 19.9997 4.92893 19.0711C4.00035 18.1425 3.26375 17.0401 2.7612 15.8268C2.25866 14.6136 2 13.3132 2 12C2 9.34784 3.05357 6.8043 4.92893 4.92893ZM7.5 12C7.5 13.1935 7.97411 14.3381 8.81802 15.182C9.66193 16.0259 10.8065 16.5 12 16.5C13.1935 16.5 14.3381 16.0259 15.182 15.182C16.0259 14.3381 16.5 13.1935 16.5 12H18.5C18.5 13.7239 17.8152 15.3772 16.5962 16.5962C15.3772 17.8152 13.7239 18.5 12 18.5C10.2761 18.5 8.62279 17.8152 7.40381 16.5962C6.18482 15.3772 5.5 13.7239 5.5 12H7.5Z"
+                      fill="#666666"
+                    />
+                    <path
+                      d="M11 9C11 9.39782 10.842 9.77936 10.5607 10.0607C10.2794 10.342 9.89782 10.5 9.5 10.5C9.10218 10.5 8.72064 10.342 8.43934 10.0607C8.15804 9.77936 8 9.39782 8 9C8 8.60218 8.15804 8.22064 8.43934 7.93934C8.72064 7.65804 9.10218 7.5 9.5 7.5C9.89782 7.5 10.2794 7.65804 10.5607 7.93934C10.842 8.22064 11 8.60218 11 9ZM16 9C16 9.39782 15.842 9.77936 15.5607 10.0607C15.2794 10.342 14.8978 10.5 14.5 10.5C14.1022 10.5 13.7206 10.342 13.4393 10.0607C13.158 9.77936 13 9.39782 13 9C13 8.60218 13.158 8.22064 13.4393 7.93934C13.7206 7.65804 14.1022 7.5 14.5 7.5C14.8978 7.5 15.2794 7.65804 15.5607 7.93934C15.842 8.22064 16 8.60218 16 9Z"
+                      fill="#666666"
+                    />
+                  </svg>
+                  Selfies
+                </a>
+              </li>
+              <li class="mb-2 me-2">
+                <a
+                  href="#"
+                  class="menu-item d-flex align-items-center fw-bold p-2 rounded-3"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 4C9.87827 4 7.84344 4.84286 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 13.0506 4.20693 14.0909 4.60896 15.0615C5.011 16.0321 5.60028 16.914 6.34315 17.6569C7.08601 18.3997 7.96793 18.989 8.93853 19.391C9.90914 19.7931 10.9494 20 12 20C13.0506 20 14.0909 19.7931 15.0615 19.391C16.0321 18.989 16.914 18.3997 17.6569 17.6569C18.3997 16.914 18.989 16.0321 19.391 15.0615C19.7931 14.0909 20 13.0506 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM4.92893 4.92893C6.8043 3.05357 9.34784 2 12 2C14.6522 2 17.1957 3.05357 19.0711 4.92893C20.9464 6.8043 22 9.34784 22 12C22 13.3132 21.7413 14.6136 21.2388 15.8268C20.7362 17.0401 19.9997 18.1425 19.0711 19.0711C18.1425 19.9997 17.0401 20.7362 15.8268 21.2388C14.6136 21.7413 13.3132 22 12 22C10.6868 22 9.38642 21.7413 8.17317 21.2388C6.95991 20.7362 5.85752 19.9997 4.92893 19.0711C4.00035 18.1425 3.26375 17.0401 2.7612 15.8268C2.25866 14.6136 2 13.3132 2 12C2 9.34784 3.05357 6.8043 4.92893 4.92893ZM13 7V11.5858L15.9142 14.5L14.5 15.9142L11 12.4142V7H13Z"
+                      fill="#666666"
+                    />
+                  </svg>
+
+                  Recent
+                </a>
+              </li>
+              <li class="mb-2 me-2">
+                <a
+                  href="#"
+                  class="menu-item d-flex align-items-center fw-bold p-2 rounded-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                  >
+                    <path
+                      fill="#666"
+                      d="m6 21-.998.067.062.933H6v-1Zm12 0v1h.936l.062-.933L18 21ZM3 5H2v2h1V5Zm18 2h1V5h-1v2Zm-10 4v-1H9v1h2Zm-2 5v1h2v-1H9Zm6-5v-1h-2v1h2Zm-2 5v1h2v-1h-2ZM4.002 6.067l1 15 1.996-.134-1-15-1.996.134ZM6 22h12v-2H6v2Zm12.998-.933 1-15-1.996-.134-1 15 1.996.134ZM19 5H5v2h14V5ZM3 7h2V5H3v2Zm16 0h2V5h-2v2ZM9 11v5h2v-5H9Zm4 0v5h2v-5h-2Zm-1-7c1.396 0 2.572.955 2.905 2.25l1.937-.5A5.002 5.002 0 0 0 12 2v2ZM9.094 6.25A3.002 3.002 0 0 1 12 4V2a5.002 5.002 0 0 0-4.842 3.75l1.936.5Z"
+                    /></svg
+                  >Deleted</a
+                >
+              </li>
+            </ul>
+
+            <div class="form-check form-switch mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="darkLightSwitch"
+                checked
+              />
+              <label class="form-check-label" for="darkLightSwitch">
+                Dark/Light theme
+              </label>
+            </div>
+          </div>
+
+          <!-- Here is column offset of 1col follow design -->
+          <div class="col-md-9 col-lg-8 offset-lg-1">
+            <div
+              class="items-grid-header d-flex justify-content-between align-items-center"
+            >
+              <div class="d-flex flex-column">
+                <h1 class="fw-bold">All photos</h1>
+                <div class="fw-bold opacity-75">150 items</div>
+              </div>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-dark active">
+                  Newest
+                </button>
+                <button type="button" class="btn btn-outline-dark">
+                  Latest
+                </button>
+              </div>
+            </div>
+
+            <div id="card-container" class="row pt-4 mt-2"></div>
+            <div id="loading" class="text-center fw-bold py-5">Loading...</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <!-- @@include('./html/_footer.html') -->
+  </body>
+
+  <!-- Bootstrap js imported from CDN -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Custom Scripts -->
+  <script src="./js/scripts.min.js"></script>
+</html>

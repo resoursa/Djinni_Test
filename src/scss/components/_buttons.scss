@@ -1,0 +1,23 @@
+// Buttons Customisation
+
+.btn-primary {
+  &:hover {
+    color: $gray-100;
+  }
+}
+
+.btn-outline-dark {
+  border-color: $gray-300;
+}
+@include color-mode(dark) {
+  .btn-outline-dark {
+    color: $gray-300;
+
+    &:hover,
+    &.active {
+      color: $gray-600;
+      border-color: $gray-300;
+      background-color: $gray-300;
+    }
+  }
+}

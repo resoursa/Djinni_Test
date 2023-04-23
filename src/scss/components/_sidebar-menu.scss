@@ -1,0 +1,26 @@
+// Sidebar menu
+.sidebar-menu {
+  .menu-item {
+    color: $gray-600;
+    &.active,
+    &:hover {
+      background-color: $primary;
+      transition: 0.15s;
+      color: $white;
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.btn-outline-dark {
+  --#{$prefix}btn-border-color: #fff;
+}
+
+@include color-mode(dark) {
+  .btn-outline-dark {
+    --#{$prefix}btn-border-color: rgba(255, 255, 255, 0.8);
+  }
+}

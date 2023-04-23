@@ -1,0 +1,14 @@
+// // Global SCSS-files imports
+@import "./vars";
+@import "./utils";
+
+// Import Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// UI componets
+@import "./components/buttons";
+@import "./components/sidebar-menu";
+
+// Sections or Pages SCSS-files imports
+@import "./header";
+@import "./footer";

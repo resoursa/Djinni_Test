@@ -1,0 +1,64 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Prefix for :root CSS variables
+$prefix: djn- !default;
+
+// Font family
+$font-family-base: "Commissioner", sans-serif;
+
+// Container breakpoints
+// Strict container width on breakpoints
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 960px,
+  xl: 1128px,
+);
+
+// Grid breakpoints
+// Modifying default Bootstrap's $grid-breakpoints map
+$grid-breakpoints: (
+  xs: 0,
+  sm: 500px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1400px,
+) !default;
+
+// White and gray Gradations
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #eeeeee;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #666666;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #292929;
+$black: #000;
+
+// Colors
+$primary: #ed7135;
+$light: $gray-200;
+
+// Dropdown
+$dropdown-min-width: auto;
+
+// Forms
+$input-focus-border-color: $primary;
+
+// Buttons
+// $btn-color: #fff;
+$btn-font-weight: bold;
+$btn-border-width: 2px;
+
+$btn-link-color: $gray-600;
+$btn-link-hover-color: $gray-900;
+$link-decoration: none;
+
+// Card
+$card-cap-bg: traransparent;

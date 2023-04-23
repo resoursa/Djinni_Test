@@ -1,0 +1,74 @@
+// Header
+
+.navbar {
+}
+
+// Because active and hover link state is bold,
+// had to use text shadow instead of font-weight,
+// to avoid text jugling while hover
+.navbar-nav {
+  margin-bottom: -1px;
+  .nav-link {
+    border-bottom: 1px solid transparent;
+    transition: 0.25s;
+    &:hover,
+    &.active {
+      text-shadow: 0.5px 0px 0px #000;
+      border-color: $primary;
+    }
+  }
+}
+
+// Adjust lang dropdown to center, to escape
+// overlaping of window edge on middle screen size
+.dropdown-menu[data-bs-popper] {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.search-wrap {
+  position: relative;
+  max-width: 546px;
+
+  .form-control {
+    padding-left: 44px;
+  }
+
+  .search-submit {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+      width: 100%;
+    }
+
+    path {
+      stroke: #666666;
+      transition: 0.25s;
+    }
+
+    &:hover path {
+      stroke: #292929;
+    }
+  }
+}
+
+// Light Dark mode for serch input
+.search-wrap {
+  .form-control {
+    @extend .bg-light;
+  }
+}
+
+@include color-mode(dark) {
+  .search-wrap {
+    .form-control {
+      background-color: transparent !important;
+    }
+  }
+}
