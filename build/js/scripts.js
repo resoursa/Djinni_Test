@@ -7,6 +7,20 @@ const cardContainer = document.getElementById("card-container");
 const loading = document.getElementById("loading");
 let page = 1;
 
+// Random text array
+const textPieces = [
+  "Lorem ipsum dolor sit amet.",
+  "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis pulvinar dolor quis lorem vehicula blandit.",
+  "Maecenas hendrerit enim eu neque bibendum, vel dictum neque scelerisque.",
+  "Suspendisse nec lacus euismod, sollicitudin purus vel, consequat turpis.",
+  "Nulla facilisi. Phasellus lacinia semper est, a lacinia felis ultricies eu."
+];
+
+// Choose random piece of text
+function getRandomText() {
+  return textPieces[Math.floor(Math.random() * textPieces.length)];
+}
+
 // Promise for loop picsum object to cards
 const loadCards = async () => {
   try {
@@ -18,9 +32,13 @@ const loadCards = async () => {
 
     // Convert to JSON
     const data = await response.json();
-
+    
     // Loop recieved object to cards
-    data.forEach((card) => {
+    data.forEach(async (card) => {
+      
+      // Call random text 
+      const randomText = getRandomText();
+
       const cardElement = document.createElement("div");
       cardElement.classList.add('col-md-6', 'mb-4');
       cardElement.innerHTML = `
@@ -32,7 +50,7 @@ const loadCards = async () => {
                   />
                   <div class="card-body">
                     <h5 class="card-title">${card.author}</h5>
-                    <p class="card-text">${card.width} x ${card.height}</p>
+                    <p class="card-text two-line-ellipsis" style="min-height: 48px">${randomText}</p>
                   </div>
                   <div class="card-footer py-4">
                     <a href="#" style="--djn-btn-color: #fff" class="btn btn-primary me-3">Save to collection</a>

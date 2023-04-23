@@ -1,8 +1,9 @@
 // Buttons Customisation
 
 .btn-primary {
-  &:hover {
-    color: $gray-100;
+  &:hover,
+  &:active {
+    color: $gray-100 !important;
   }
 }
 

@@ -8070,8 +8070,9 @@ fieldset:disabled .btn {
   z-index: 3 !important;
 }
 
-.btn-primary:hover {
-  color: #f8f9fa;
+.btn-primary:hover,
+.btn-primary:active {
+  color: #f8f9fa !important;
 }
 
 .btn-outline-dark {
